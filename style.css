@@ -77,6 +77,23 @@ p {
 }
 
 
+nav {
+  text-align: center;
+  padding: 2rem;
+}
+
+
+.navbar__links {
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+
+
+
 
 
 
