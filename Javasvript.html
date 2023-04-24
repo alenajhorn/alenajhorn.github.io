@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<main>
+    <h1>JavaScript Programmering</h1>
+    
+    <section class="number">
+        <h2>String</h2>
+        <p>String er kodningens måde at bruge tekst på. For at opnå dette, skal man blot anvende anførselstegn.</p>
+        <h3>Eksempel på String</h3>
+        <p>const firstName: 'Peter'; <br> const lastName: 'Larsen'; <br> const result: 'My name is ${firstName} ${lastName}';' </p>
+    </section>
+
+    <section class="number">
+        <h2>Number</h2>
+        <p>Number ligger i ordet, som betyder tal.</p>
+        <h3>Eksempel på Number</h3>
+        <p>const lommeregner: 5 + 5; <br> console.log(lommeregner); // 10</p>
+    </section>
+
+    <section class="Boolean">
+        <h2>Booleans</h2>
+        <p>Booleans kan man bruge, for at se om noget er true eller false. Man benytter booleans i 'if statements' og for 'loops'.</p>
+        <h3>Eksempel på Boolean</h3>
+        <p>const age = 15;
+            if (age >= 18) { <br>
+                console.log('You can drive'); <br>
+                    console.log('Congratulation homie!'); <br>
+                        } else if (age >= 17) { <br>
+                        console.log('Almost there brother!'); <br>
+                            } else { <br>
+                                console.log('You can not drive'); } <br><br>
+                    
+                                Det vil altså sige, at man her undersøger om personen er 18 og derved gammel nok til at køre bil. Hvis dette er tilfældet (true), så gives beskeden "You can drive". Er det ikke tilfældet og personen er 17 (næsten gammel nok), så gives beskeden "Almost there brother.". Er personen derimod under 17 år, gives beskeden "You can not drive.". Og på den måde bruges booleans. 
+        </p>
+ </section>
+
+            
+    <section class="function">
+        <h2>Function</h2>
+        <p>Koden funtion er en kodelinje som udfører en meget specifik opgave. </p>
+        <h3>Eksempel på Function</h3>
+        <p>function greet () { <br>
+            console.log('Hello stranger'); <br> 
+        } <br> Ønsker man at fremkalde denne funktion, kan man blot skrive: <br> greet (); <br> og så vil den hilsen man har lagt ind, komme frem i konsollen. <br> <br> Ofte vil man dog støde på en function som er sat sammen med en parameter. Man kan fx have en variable som hedder navn, hvor man beder brugeren indtaste sit navn og når der bliver trykket "enter", så kommer der en besked op. 
+        </p>
+        <h3>Eksempel på function+parameter</h3>
+            <p>function greet(navn) { <br> 
+                 console.log("Hello" + navn"); <br>
+        } <br> <br> 
+
+            let name = prompt ("Enter your navn"); <br>
+            greet(name);
+            </p>
+    </section>
+
+    <section class="variabler">
+        <h2>Variabler</h2>
+        <p>Den bedste måde at beskrive en variable på, er ved at forestille sig at en variable er en kontainer. Denne kontainer indeholder data. Lad mig give et eksempel.</p>
+        <h3>Eksempel på Variabler</h3>
+        <p>let num1 = 5; <br>
+            let num2 = 10; <br><br> 
+        
+            const num1 = 5;  <br>
+            const num2 = 10;  <br>
+
+            Der er to måder at skrive en variable på, nemlig med enten "let" eller "const". Forskellen er egentligt super simpel. Hvis man regner med at værdien af ens variable ændres løbene, er det nødvendigt at bruge let. Her er det nemlig muligt at ændre værdien, med en simpel kodelinje såsom: <br> num1 = 6. <br> Nu har vi ændret værdien num1 fra 5 til 6. Bruger man derimod const (konstant), kan værdien ikke ændres. 
+        </p>
+
+        <section class="conditionalStatement">
+             <h2>Conditional Statement</h2>
+        <p>Når man kigger på Conditional Statement, er der 3 typer: <br>
+            if statement, if...else og if...else if...if. 
+
+        </p>
+        </section>
+       
+
+    
+
+    </section>
+
+
+   
+</main>
+
+
+
+
+
+    
+</body>
+</html>

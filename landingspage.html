@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+
+<body>
+
+    <section class="banner" id="sec">
+    <header>
+        <a href="#" class="logo">
+            <span style="--i:1;">P</span>
+            <span style="--i:2;">O</span>
+            <span style="--i:3;">R</span>
+            <span style="--i:4;">T</span>
+            <span style="--i:5;">F</span>
+            <span style="--i:6;">O</span>
+            <span style="--i:7;">L</span>
+            <span style="--i:8;">I</span>
+            <span style="--i:9;">O</span>
+        </a>
+        <div id="toggle" onclick="toggle()"></div>
+    </header>
+
+    <div class="content">
+        <h2>Hi friends, <br>I'm <span>Alen Ajhorn</span></h2>
+        <p>This is my personal portfolio where I store knowledge I have gained during my study - Multimediedesign. <br> <br> Feel free to browse around. 
+        </p>
+        <a href="http://127.0.0.1:5500/aboutMe.html" target="b">Know More</a>
+    </div>
+
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/alenajhorn/" target="_blank"> <img src="images/facebook.png" alt="facebook logo"></a></li>
+        <li><a href="https://twitter.com/alen_ajhorn" target="_blank"> <img src="images/twitter.png" alt="twitter logo"></a></li>
+        <li><a href="#"> <img src="images/linkedin.png" alt="linkedin logo"></a></li>
+   </ul> 
+</section>
+
+<nav class="navigation">
+    <ul> 
+        <li class="navigation__links grow"><a href="http://127.0.0.1:5500/landingspage.html" target="_blank">Home</a></li>
+        <li class="navigation__links grow"><a href="http://127.0.0.1:5500/HTML.html" target="_blank">HTML</a></li>
+        <li class="navigation__links grow"><a href="http://127.0.0.1:5500/uiuxTrends23.html" target="_blank">CSS</a></li>
+        <li class="navigation__links grow"><a href="http://127.0.0.1:5500/Javasvript.html" target="_blank">JavaScript</a></li>
+        <li class="navigation__links grow"><a href="http://127.0.0.1:5500/aboutMe.html" target="_blank">About Me</a></li>
+    </ul>
+</nav>
+
+<main>
+
+
+</main>
+
+
+<script type="text/javascript">
+    function toggle () {
+        let sec = document.getElementById('sec');
+        let nav = document.getElementById('navigation');
+        sec.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

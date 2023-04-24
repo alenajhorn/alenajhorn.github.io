@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+
+}
+section {
+    border-bottom: 1px dashed #40c3ff;
+}
+
+body {
+    background-color: #020d0e;
+   
+}
+
+/* Tekst udseende */ 
+h1 {
+    color: white;
+    margin: 5rem;
+    text-align: center;
+   
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h2, h3 {
+    color: white; 
+    margin-top: 1rem;
+    
+}
+
+p {
+    color: white; 
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff; 
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header #toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header #toggle:before {
+    content: '';
+    position: absolute;
+    top: 7px; 
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+header #toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 7px; 
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.banner.active header #toggle:before {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active header #toggle:after {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.banner.active {
+    transform: translateX(-400);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: #020d0e;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.banner.active {
+    transform: translateX(-400px);
+}
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: #40c3ff; 
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+.navigation.active{
+    right: 0;
+
+}
+
+.navigation ul{
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.navigation ul li {
+    list-style: none;    
+}
+
+.navigation ul li a {
+    color: #fff; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+
+.content {
+    max-width: 600px;
+}
+
+.content h2 {
+    color: #fff; 
+    font-size: 2.5em;
+}
+
+.content h2 span {
+    color: #40c3ff;
+    font-size: 1.2em;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #fff; 
+    font-weight: 300;
+}
+
+.content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000; 
+    padding: 10px 30px; 
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+/* Design af Sociale medier ikoner */ 
+.socials {
+    position: absolute; 
+    display: flex; 
+    flex-direction: column;
+    right: 100px;
+}
+
+.socials li {
+    list-style: none;
+}
+
+.socials li a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border: 4px solid #fff;
+    margin: 10px 0 0; 
+}
+
+.socials li a:hover { 
+    background: #fff;
+}
+
+.socials li a img {
+    max-width: 20px;
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+/* Wavy Portfolio tekst */ 
+.logo {
+    position: relative;
+   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+
+.logo span {
+    position: relative;
+    display :inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.04s * var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40%, 100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Navigations__links grow on hover settings */ 
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+    transform: scale(1.1); 
+}
+
+
+
+/* Responsive design */ 
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 50px;
+    }
+    .banner  {
+        padding: 100px 50px 150px;
+    }
+    .banner h2 {
+        font-size: 1.8em;
+    }
+
+    
+    .banner .content p,
+    .banner .content a {
+        font-size: 1em;
+    }
+
+    .banner .active {
+        transform: translateX(-250px);
+    }
+    .navigation {
+        width: 250px;
+    }
+
+    .navigation ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    .socials {
+        position: absolute; 
+        bottom: 50px; 
+        right: initial;
+        flex-direction: row;
+    }
+
+    .socials li a {
+        margin: initial; 
+        margin-right: 10px;
+
+    }
+
+} 
+
+
+ 
+/* ------------------JavaScript Page ------------------*/ 
+
+.cardexample {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.body__js {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jsHeadline {
+    text-align: center;
+    margin: 4rem;
+}
+
+.card {
+    width: 320px; 
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cardBody {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: rgba(49, 49, 49, 0.586);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: black;
+    padding: 30px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    transition: 1.5s;
+}
+
+.card:hover .cardBody{
+    right: 0;
+}
+
+.card__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.card__info {
+   font-size: 1rem;
+   line-height: 25px;
+   margin: 45px 0;
+   font-weight: 400;
+   color: #fff; 
+}
+
+.card__btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 120px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer; 
+}
+
+.card:hover .cardBody{
+
+}
+
